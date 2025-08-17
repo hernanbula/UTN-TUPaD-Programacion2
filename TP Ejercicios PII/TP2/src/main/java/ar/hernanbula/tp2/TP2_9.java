@@ -47,10 +47,10 @@ public class TP2_9 {
     
     static double calcularCostoEnvio(double peso, String zona) {
         double costo = 0;
-        if ("N".equals(zona)) {
+        if ("N".equalsIgnoreCase(zona)) {
         // Nacional: $5 por kg
             costo = (peso * 5);
-        } else if ("I".equals(zona)) {
+        } else if ("I".equalsIgnoreCase(zona)) {
         // Internacional: $10 por kg
             costo = (peso * 10);
         }
