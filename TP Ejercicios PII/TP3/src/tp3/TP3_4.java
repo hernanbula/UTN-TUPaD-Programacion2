@@ -27,6 +27,7 @@ public class TP3_4 {
         gall1.ponerHuevo(400);
         gall2.ponerHuevo(1200);
         
+        System.out.println("\nDATOS GALLINERO:");
         gall1.mostrarEstado();
         gall2.mostrarEstado();
         

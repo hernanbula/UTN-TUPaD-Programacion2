@@ -58,11 +58,26 @@ public class NaveEspacial {
         System.out.println("Total en depósitos: " + combustible + " mil galones (" + ((double)combustible * 3.75) + " mil litros) de combustible.\n");
     }
     
+    public String getNombreNave() {
+        System.out.println("Nombre de la nave: " + nombre);
+        return nombre;
+    }
+
+    public double getDistanciaRecorrida() {
+        System.out.println("Distancia recorrida: " + distanciaTotal + " UA (" + (distanciaTotal*150) + " millones de Km).");
+        return distanciaTotal;
+    }
+    
+    public int getCombustibleDepósitos() {
+        System.out.println("Combustible en depósitos: " + combustible + " mil galones (" + ((double)combustible * 3.75) + " mil litros) de combustible.");
+        return combustible;
+    }
+    
     public void mostrarEstado() {
         System.out.println("ESTADO FINAL DE LA MISIÓN");
-        System.out.println("Nombre de la nave: " + nombre);
-        System.out.println("Distancia recorrida: " + distanciaTotal + " UA (" + (distanciaTotal*150) + " millones de Km).");
-        System.out.println("Combustible en depósitos: " + combustible + " mil galones (" + ((double)combustible * 3.75) + " mil litros) de combustible.");
+        getNombreNave();
+        getDistanciaRecorrida();
+        getCombustibleDepósitos();
         if (finalMision) {
             System.out.println("Misión completa: Retorno a la Tierra: ¡Exitoso!\n");
         } else {

@@ -36,10 +36,26 @@ public class Gallina {
         return edad;
     } 
     
+    public int getIdGallina() {
+        System.out.println("Id Gallina: " + idGallina);
+        return idGallina;
+    }
+    
+    public int getEdad() {
+        System.out.println("Edad: " + edad);
+        return edad;
+    }
+    
+    public int getHuevosPuestos() {
+        System.out.println("Huevos puestos: " + huevosPuestos);
+        return huevosPuestos;
+    }
+    
     public void mostrarEstado() {
-        System.out.println("idGallina: " + idGallina);
-        System.out.println("edad: " + edad);
-        System.out.println("huevosPuestos: " + huevosPuestos);
+        System.out.println("----------------");
+        getIdGallina();
+        getEdad();
+        getHuevosPuestos();
         System.out.println();
     }
     

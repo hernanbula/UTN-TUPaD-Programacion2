@@ -1,7 +1,6 @@
-
 package tp3;
 
-   /*
+/*
     @author Hernán E. Bula
     
     1.​ Registro de Estudiantes
@@ -10,40 +9,66 @@ package tp3;
     Tarea: Instanciar a un estudiante, mostrar su información, aumentar y disminuir
     calificaciones.
     
-     */
-
+ */
 public class Estudiante {
 
-    private String nombre,apellido;
+    private String nombre, apellido;
     private int curso, calificacion;
 
-    
-    public void setEstudiante(String nombreNuevo, String apellidoNuevo, int cursoNuevo, int calificacionNueva) {
-        nombre = nombreNuevo;
-        apellido = apellidoNuevo;
-        curso = cursoNuevo;
-        calificacion = calificacionNueva;
+    public void setEstudiante(String nombre, String apellido, int curso, int calificacion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.curso = curso;
+        this.calificacion = calificacion;
         getMostrarInfo();
     }
-            
-    public void getMostrarInfo() {
+
+    public String getNombre() {
         System.out.println("Estudiante: " + nombre + " " + apellido);
+        return nombre + " " + apellido;
+    }
+
+    public int getCurso() {
         System.out.println("Curso: " + curso);
-        System.out.println("Calificación: " + calificacion);
-        System.out.println();
+        return curso;
     }
- 
-    public int setSubirCalificacion(int puntos) {
+
+    public int getCalificacion() {
+        System.out.println("Calificacion: " + calificacion + "\n");
+        return calificacion;
+    }
+    
+    public void getMostrarInfo() {
+        System.out.println("INFORMACIÓN DEL ESTUDIANTE");
+        getNombre();
+        getCurso();
+        getCalificacion();
+    }
+
+    public void subirCalificacion(int puntos) {
         calificacion += puntos;
-        getMostrarInfo();
-        return calificacion;
+        System.out.print("Subir nota. ");
+        setCalificacion(calificacion);
+        getCalificacion();
     }
-    
-    public int setBajarCalificacion(int puntos) {
+
+    public void bajarCalificacion(int puntos) {
         calificacion -= puntos;
-        getMostrarInfo();
-        return calificacion;
-   
+        System.out.print("Bajar nota. ");
+        setCalificacion(calificacion);
+        getCalificacion();
     }
-    
+
+    public void setCalificacion(int calificacion) {
+        if (calificacion < 0) {
+            this.calificacion = 0; // Evitar valores negativos
+            System.out.println("La calificación no puede ser negativa.");
+        } else if (calificacion > 10) {
+            this.calificacion = 10; // Evitar valores mayores a 10
+            System.out.println("La calificación no puede ser mayor a 10.");
+        } else {
+            this.calificacion = calificacion;
+        }
+    }
+
 } // Fin de Class

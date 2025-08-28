@@ -20,9 +20,9 @@ public class TP3_1 {
         
         est1.setEstudiante("Hernan", "Bula", 4, 7);
         
-        est1.setSubirCalificacion(2);
+        est1.subirCalificacion(2);
         
-        est1.setBajarCalificacion(1);
+        est1.bajarCalificacion(1);
 
         est1.getMostrarInfo();
         

@@ -19,9 +19,19 @@ public class Libro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+    public String getTitulo() {
+        System.out.println("Título: " + titulo);
+        return titulo;
+    }
     
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getAutor() {
+        System.out.println("Autor: " + autor);
+        return autor;
     }
     
     public void setAnioPublicacion(int anioPublicacion) {
@@ -32,10 +42,15 @@ public class Libro {
         }   
     }
     
-    public void getInfoLibro() {
-        System.out.println("Libro: " + titulo);
-        System.out.println("Autor: " + autor);
+        public int getAnio() {
         System.out.println("Año de publicación: " + anioPublicacion);
+        return anioPublicacion;
+    }
+    
+    public void getInfoLibro() {
+        getTitulo();
+        getAutor();
+        getAnio();
         System.out.println();
     }
     
