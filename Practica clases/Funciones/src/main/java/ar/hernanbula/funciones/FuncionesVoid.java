@@ -21,6 +21,12 @@ public class FuncionesVoid {
     
     } // Cierre del main
     
+    /**
+     * Método que sirve para imprimir un símbolo una "x" cantidad de veces.
+     * @param simbolo Recibe el caracter a repetir.
+     * @param veces Recibe un número con la cantidad de veces que se quiere repetir el símbolo.
+     */
+    
     static void imprimirSimbolo(char simbolo, int veces) {
         
         for (int i = 0; i < veces; i++) {

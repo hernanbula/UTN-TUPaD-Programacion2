@@ -56,7 +56,13 @@ public class TP2_9 {
         }
             return costo;
     }
-        
+        /**
+         * Este método se usa para calcular el Total de la compra.
+         * @param precioProducto recibe el precio del producto (double)
+         * @param costoEnvio recibe el costo del envío (double)
+         * @return devuelve el total de la cuenta <code>precioProducto + costoEnvio</code>.
+         */
+         
     static double calcularTotalCompra(double precioProducto, double costoEnvio) {
         double total = precioProducto + costoEnvio;
         return total;

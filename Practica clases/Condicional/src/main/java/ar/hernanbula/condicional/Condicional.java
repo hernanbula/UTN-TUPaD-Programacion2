@@ -11,6 +11,7 @@ public class Condicional {
     public static void main(String[] args) {
         int a, b;
         double division;
+
         Scanner input = new Scanner(System.in);
 
         System.out.print("Ingresá un número: ");
@@ -27,5 +28,7 @@ public class Condicional {
         }
         
         System.out.println("Chau!");
+
+
     }
 }

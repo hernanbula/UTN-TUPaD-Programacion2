@@ -65,6 +65,14 @@ public class Funciones {
         
     } // Cierre main
     
+    /**
+     * Método que sirve para leer un entero entre un mínimo y un máximo. Si no se ingresa un número válido, marca ERROR y vuelve a solicitarlo.
+     * @param mensaje Este parámetro sirve para recibir una cadena de caracteres con el mesaje que queremos colocar al solicitar el número.
+     * @param min Valor mínimo del rango solicitado.
+     * @param max Valor máximo del rango solicitado.
+     * @return El valor ingresado por el usuario luego de validarlo en el rango.
+     */
+    
     static int leerEnteroEntre(String mensaje, int min, int max) {
         Scanner input = new Scanner(System.in);
         System.out.println(mensaje + ": ");
