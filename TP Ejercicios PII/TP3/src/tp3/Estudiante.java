@@ -19,7 +19,7 @@ public class Estudiante {
         this.nombre = nombre;
         this.apellido = apellido;
         this.curso = curso;
-        this.calificacion = calificacion;
+        setCalificacion(calificacion);
         getMostrarInfo();
     }
 
