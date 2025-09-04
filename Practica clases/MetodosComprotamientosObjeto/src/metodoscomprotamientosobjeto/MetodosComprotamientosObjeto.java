@@ -13,7 +13,7 @@ public class MetodosComprotamientosObjeto {
     public static void main(String[] args) {
 
         Scanner imput = new Scanner(System.in);
-        CuentaBancaria cb = new CuentaBancaria();
+        CuentaBancaria cb = new CuentaBancaria("miAlias4", "Yenes", "Billetera virtual");
         
         cb.mostrarDatos();
         

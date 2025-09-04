@@ -3,17 +3,63 @@ package metodoscomprotamientosobjeto;
 
 public class CuentaBancaria {
     
+    // ATRIBUTOS
     private String CBU;
-    private String alias;
+    private String alias, moneda, tipo;
     private double saldo;
     
-    public void mostrarDatos() {
-        System.out.println(CBU + " " + alias + " " + saldo);
+    // CONSTRUCTORES
+    
+    // Constructor 1
+    public CuentaBancaria(String alias, String moneda, String tipo) {
+        this.CBU = generateCBU();
+        setAlias(alias);
+        setMoneda(moneda);
+        setTipo(tipo);
     }
     
-    public void setAlias(String nuevoAlias) {
-        if (nuevoAlias != null) {
-            alias = nuevoAlias;
+    // Constructor 2
+    public CuentaBancaria (String moneda, String tipo) {
+      // setAlias("ALIAS.POR.DEFECTO");
+      // setMoneda(moneda);
+      // setTipo(tipo);
+        this("ALIAS.POR.DEFECTO", moneda, tipo); // Esto funciona igual que lo anterior, pero nos evta repetir código. Llamamos al constructor con más parámetros y configuramos el parámetro que nos falta.
+    }  
+    
+    //Constructor 3
+    public CuentaBancaria() {  
+    }
+    
+    // METODOS
+    
+    private String generateCBU() {
+        return "1234567890";
+    }
+    
+    public void mostrarDatos() {
+        System.out.println("CBU: " + CBU + "; alias: " + alias + "; moneda: " + moneda + "; tipo: " + tipo + "; saldo: " + saldo);
+    }
+    
+    @Override
+    public String toString() {
+        return "CuentaBancaria{" + "CBU: " + CBU + "; alias: " + alias + "; moneda: " + moneda + "; tipo: " + tipo + "; saldo: " + saldo + '}';
+    }
+
+    public void setAlias(String alias) {
+        if (alias != null) {
+            this.alias = alias;
+        }
+    }
+    
+    public void setMoneda(String moneda) {
+        if (moneda != null) {
+            this.moneda = moneda;
+        }
+    }
+    
+    public void setTipo(String tipo) {
+        if (tipo != null) {
+            this.tipo = tipo;
         }
     }
     
