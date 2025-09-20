@@ -1,0 +1,18 @@
+package DependenciaDeCreacion;
+
+/**
+ *
+ * @author Hernán E. Bula
+ */
+public class Usuario {
+
+    private String nombre;
+
+    public Usuario(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+}

@@ -72,11 +72,6 @@ public class EjerciciosAdicionalesPOO_4 {
 //    4.​ Mostrar el total de cuentas generadas.
 
         System.out.println("\nEl total de cuentas generadas es: " + Cuenta.mostrarTotalCuentas());
-
-        
-        
-        
-        
         
     }
 

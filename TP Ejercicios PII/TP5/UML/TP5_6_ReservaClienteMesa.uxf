@@ -1,0 +1,21 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>200</y><w>270</w><h>130</h></coordinates><panel_attributes>Reserva
+--
+-fecha: String
+-hora: String
+-mesa: Mesa
+-cliente: Cliente
+--
++Reserva(String, String, Mesa)
++setCliente(cliente: Cliente): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>200</y><w>150</w><h>90</h></coordinates><panel_attributes>Cliente
+--
+-nombre: String
+-telefono: String
+--
++Cliente(String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>440</y><w>150</w><h>90</h></coordinates><panel_attributes>Mesa
+--
+-numero: String
+-capacidad: String
+--
++Mesa(String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>240</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>320</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>160</y><w>150</w><h>30</h></coordinates><panel_attributes>Asociacion Unidireccional</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>370</y><w>90</w><h>30</h></coordinates><panel_attributes>Agregacion</panel_attributes><additional_attributes></additional_attributes></element></diagram>

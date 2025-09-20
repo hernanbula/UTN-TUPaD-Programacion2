@@ -1,0 +1,83 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>280</x><y>55</y><w>210</w><h>80</h></coordinates><panel_attributes>_Persona_
+--
+-nombre: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>55</y><w>210</w><h>80</h></coordinates><panel_attributes>_Pasaporte_
+--
+-numero: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>75</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>245</y><w>210</w><h>80</h></coordinates><panel_attributes>_Auto_
+--
+-modelo: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>245</y><w>210</w><h>80</h></coordinates><panel_attributes>_Motor_
+--
+-tipo: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>275</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>435</y><w>210</w><h>80</h></coordinates><panel_attributes>_Libro_
+--
+-titulo: String
+-autor: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>435</y><w>210</w><h>80</h></coordinates><panel_attributes>_Portada_
+--
+-ilustracion: String
+-tipo: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>455</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1
+</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>625</y><w>210</w><h>80</h></coordinates><panel_attributes>_Vehículo_
+--
+-Tipo: String
+-Modelo: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>625</y><w>210</w><h>80</h></coordinates><panel_attributes>_Patente_
+--
+-numeroPatente: String
+-anio: int
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>645</y><w>230</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;20;210;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>15</y><w>160</w><h>30</h></coordinates><panel_attributes>Asociación Unidireccional
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>205</y><w>100</w><h>30</h></coordinates><panel_attributes>Agregación</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>385</y><w>100</w><h>30</h></coordinates><panel_attributes>Composicion</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>585</y><w>160</w><h>30</h></coordinates><panel_attributes>Asociación Bidireccional</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>825</y><w>210</w><h>120</h></coordinates><panel_attributes>_Documento_
+--
+-titulo: String
+-cuerpo: int
+--
++Documento(String, String)
++getTitulo(): String
++getCuerpo(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>795</y><w>160</w><h>20</h></coordinates><panel_attributes>Dependencia de Uso</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>825</y><w>210</w><h>120</h></coordinates><panel_attributes>_Impresora_
+--
+-estaEncendida: boolean
+-modelo: String
+--
++impresora()
++encender: void
++imprimir(Documento): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>855</y><w>240</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;call&gt;&gt;</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>1075</y><w>220</w><h>70</h></coordinates><panel_attributes>_GestorUsuarios_
+--
+
+--
++crearYMostrar(nombre: String): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1025</y><w>160</w><h>20</h></coordinates><panel_attributes>Dependencia de Creación</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>1075</y><w>210</w><h>90</h></coordinates><panel_attributes>_Usuario_
+--
+-nombre: String
+--
++Usuario(nombre: String)
++getNombre(): String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>1105</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;create&gt;&gt;</panel_attributes><additional_attributes>210;20;10;20</additional_attributes></element></diagram>

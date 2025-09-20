@@ -129,7 +129,7 @@ public class Cuenta {
         return Cuenta.totalCuentas;
     }
     
-    public static double truncarDecimales(double num) {
+    public static double truncarDecimales(double num) { // Para hacer un truncado de decimales sin ningun método ni librería, uso aritmética: 1. Multiplico por 100. 2. Convierto a int (para descartar los decimales que sobran). Divido entre 100.0 para corre nuevamente la coma. Solo usarlo para imprimir o mostrar el numero, no para operaciones porque los decimales truncados no se recuperan.
         double truncado = ((int)(num * 100)) / 100.0;
         return truncado;
     }

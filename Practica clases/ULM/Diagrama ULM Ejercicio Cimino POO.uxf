@@ -1,0 +1,49 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>190</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;TarjetaCredito&gt;&gt;
+--
+-banco: String
+-numeroTarjeta: String
+-saldoDisponible: String
+--
++getNumeroTarjeta(): String
++esCliente(Tarjeta): boolean
+-getSaldoDisponible(double): double
+-setSaldoDisponible(double): void
++pagar(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>620</y><w>210</w><h>210</h></coordinates><panel_attributes>&lt;&lt;Cliente&gt;&gt;
+--
+-nombre: String
+-apellido: String
+-DNI: String
+-teléfono: String
+-mail: String
+--
++getNombre(): String
++getApellido(): String
++getDNI(): String
++getTarjeta(): String
++setTarjeta(String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>100</y><w>560</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Posnet&gt;&gt;
+--
+_+RECARGO_CUOTA_: double = 0.03_
+_+MIN_CUOTAS: int = 1_
+_+MAX_CUOTAS: int = 6_
+--
++efectuarPago(TarjetaCredito, double, int): ticket</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>420</y><w>210</w><h>70</h></coordinates><panel_attributes>enum
+&lt;&lt;EntidadFinanciera&gt;&gt;
+--
++BIRZA
++CASTERMARD</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>410</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1=1
+entidadFinanciera</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>520</y><w>60</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1=1
+titular</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>270</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Ticket&gt;&gt;
+--
+-nombreApellido: String
+-totalPagar: double
+-montoCuota: double
+--
++imprimirTicket(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>190</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+m1=1
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>190</y><w>40</w><h>170</h></coordinates><panel_attributes>lt=&lt;.
+m1=1
+</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element></diagram>
