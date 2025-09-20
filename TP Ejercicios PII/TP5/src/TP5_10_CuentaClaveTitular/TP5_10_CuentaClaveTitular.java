@@ -26,9 +26,6 @@ public class TP5_10_CuentaClaveTitular {
         cuenta1.setTitular(tit1);
         
         System.out.println(cuenta1);
-        
-        
-
     } 
 
 }
