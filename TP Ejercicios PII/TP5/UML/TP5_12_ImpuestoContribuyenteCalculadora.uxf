@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>190</y><w>330</w><h>120</h></coordinates><panel_attributes>Impuesto
+--
+-monto: double
+-tipo: TipoImpuesto
+-contribuyente: Contribuyente
+--
++Impuesto(double)
++setContribuyente(contribuyente: Contribuyente): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>190</y><w>210</w><h>80</h></coordinates><panel_attributes>​Contribuyente
+--
+-nombre: String
+-cuil: String
+--
++​Contribuyente(String, String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>210</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+
+</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>360</y><w>220</w><h>70</h></coordinates><panel_attributes>Calculadora
+--
+
+--
++calcular(impuesto: Impuesto): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>300</y><w>60</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;call&gt;&gt;</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>290</y><w>210</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoImpuesto
+--
++AUTOMOTOR
++INMOBILIARIO
++INGRESOS_BRUTOS
++SELLOS
++MULTAS
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>280</y><w>110</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- tipo
+
+</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element></diagram>
