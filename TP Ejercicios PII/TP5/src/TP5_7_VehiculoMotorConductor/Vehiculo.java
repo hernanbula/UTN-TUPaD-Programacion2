@@ -11,13 +11,13 @@ public class Vehiculo {
     private Motor motor; // Agregacion
     private Conductor conductor; // Asociación bidireccional
 
-    public Vehiculo(String patente, String modelo, Motor motor) {
+    public Vehiculo(String patente, String modelo, Motor motor) { // Agregación
         this.patente = patente;
         this.modelo = modelo;
         this.motor = motor;
     }
     
-    public void setConductor(Conductor conductor) {
+    public void setConductor(Conductor conductor) { //  Asociación bidireccional
         this.conductor = conductor;
         if (conductor != null && conductor.getVehiculo() != this) { // Evita el bucle infinito y asegura consistencia.
             conductor.setVehiculo(this);

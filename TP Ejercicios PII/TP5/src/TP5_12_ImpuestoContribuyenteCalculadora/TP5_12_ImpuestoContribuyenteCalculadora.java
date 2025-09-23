@@ -21,14 +21,11 @@ public class TP5_12_ImpuestoContribuyenteCalculadora {
         
         Contribuyente contrib1 = new Contribuyente("Hernán Bula", "1-23456789-0");
         
-        imp1.setContribuyente(contrib1);
+        imp1.setContribuyente(contrib1); // ​Asociación unidireccional
         
         Calculadora calc1 = new Calculadora();
         
-        calc1.calcular(imp1);
-        
-        System.out.println(imp1);
-
+        calc1.calcular(imp1); // ​Dependencia de uso
     } 
 
 }

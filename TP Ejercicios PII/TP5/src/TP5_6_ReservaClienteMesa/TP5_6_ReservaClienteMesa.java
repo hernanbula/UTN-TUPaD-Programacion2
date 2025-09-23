@@ -24,8 +24,8 @@ public class TP5_6_ReservaClienteMesa {
         Cliente cliente2 = new Cliente("Hernan Bula", "12345678");
         Cliente cliente3 = new Cliente("Hernan Bula", "12345678");
         
-        Reserva res1 = new Reserva("2025-09-20", "13-30", mesa1);
-        res1.setCliente(cliente2);
+        Reserva res1 = new Reserva("2025-09-20", "13-30", mesa1); // Agregación
+        res1.setCliente(cliente2); // Asociación unidireccional
         
         Reserva res2 = new Reserva("2025-09-21", "14-00", mesa2);
         res2.setCliente(cliente3);

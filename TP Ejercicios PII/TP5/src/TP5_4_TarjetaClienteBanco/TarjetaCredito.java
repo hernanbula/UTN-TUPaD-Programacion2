@@ -12,10 +12,10 @@ public class TarjetaCredito {
     public TarjetaCredito(String numero, String fechaVencimiento, Banco banco) {
         this.numero = numero;
         this.fechaVencimiento = fechaVencimiento;
-        this.banco = banco;
+        this.banco = banco; // Agregación
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(Cliente cliente) { //  Asociación bidireccional
         this.cliente = cliente;
         if (cliente != null && cliente.getTarjetaCredito() != this) {
             cliente.setTarjetaCredito(this);

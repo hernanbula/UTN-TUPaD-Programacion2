@@ -10,7 +10,7 @@ class CuentaBancaria {
     private String cbu;
     private int saldo;
     private Titular titular;
-    private ClaveSeguridad claveSeguridad;
+    private ClaveSeguridad claveSeguridad; // Composición
 
     public CuentaBancaria(String cbu, int saldo, String codigo, String ultimaModificacion) {
         this.cbu = cbu;
@@ -18,7 +18,7 @@ class CuentaBancaria {
         this.claveSeguridad = new ClaveSeguridad(codigo, ultimaModificacion);
     }
     
-    public void setTitular(Titular titular) {
+    public void setTitular(Titular titular) { //  Asociación bidireccional
         this.titular = titular;
         if (titular != null && titular.getCuentaBancaria() != this) {
             titular.setCuentaBancaria(this);

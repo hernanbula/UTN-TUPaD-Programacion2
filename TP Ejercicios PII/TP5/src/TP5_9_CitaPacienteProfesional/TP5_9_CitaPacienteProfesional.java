@@ -21,8 +21,8 @@ public class TP5_9_CitaPacienteProfesional {
         Profesional prof1 = new Profesional("Dr. Juan Perez", "Dermatólogía");
         CitaMedica cita1 = new CitaMedica ("2025-09-20", "18:00 hs");
         
-        cita1.setPaciente(pac1);
-        cita1.setProfesional(prof1);
+        cita1.setPaciente(pac1); // Asociación unidireccional
+        cita1.setProfesional(prof1); // Asociación unidireccional
         
         cita1.mostrarCitaMedica();
 

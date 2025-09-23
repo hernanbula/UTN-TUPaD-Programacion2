@@ -18,16 +18,16 @@ public class TP5_7_VehiculoMotorConductor {
     public static void main(String[] args) {
         
         Motor motor1 = new Motor("Nafta Turbo 170 TSI", "0987654321");
-        Vehiculo veh1 = new Vehiculo("AA415FC", "VW Nivus", motor1);
+        Vehiculo veh1 = new Vehiculo("AA415FC", "VW Nivus", motor1); // Agregación
         Conductor cond1 = new Conductor("Hernán Bula", "1-23456789-0");
         
         System.out.println(cond1);
         
         System.out.println(veh1);
         
-        cond1.setVehiculo(veh1);
+        cond1.setVehiculo(veh1); //  Asociación bidireccional
         
-        veh1.setConductor(cond1);
+        veh1.setConductor(cond1); //  Asociación bidireccional comprobando que no se hace bucle infinito
         
         System.out.println(veh1);
 

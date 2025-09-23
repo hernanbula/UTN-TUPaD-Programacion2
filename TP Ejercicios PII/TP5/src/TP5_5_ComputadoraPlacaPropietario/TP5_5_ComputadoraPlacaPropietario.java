@@ -23,8 +23,8 @@ public class TP5_5_ComputadoraPlacaPropietario {
         System.out.println(prop1);
         System.out.println(compu1);
         
-        prop1.setComputadora(compu1);
-        compu1.setPropietario(prop1); // Como en la linea anterior ya fue asociada la computadora al propietario, en esta linea no se hace nada. Pero es para asegurar que no se genera un bucle infinito.
+        prop1.setComputadora(compu1); // Asociación bidireccional
+        compu1.setPropietario(prop1); // Asociación bidireccional. Como en la linea anterior ya fue asociada la computadora al propietario, en esta linea no se hace nada. Pero es para asegurar que no se genera un bucle infinito.
         
         System.out.println(prop1);
         

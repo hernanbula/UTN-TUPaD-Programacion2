@@ -21,11 +21,11 @@ public class TP5_1_PasaporteFotoTitular {
         
         Titular titular1 = new Titular("Hernán E. Bula", "1234567");
 
-        Pasaporte pass1 = new Pasaporte("AA123456", "2025-09-17", "https://www.pasaporte.com.ar/wp-content/uploads/2019/06/pasaporte-argentino.jpg", ".png");
+        Pasaporte pass1 = new Pasaporte("AA123456", "2025-09-17", "https://www.pasaporte.com.ar/wp-content/uploads/2019/06/pasaporte-argentino.jpg", ".png"); // Composición
         
-        titular1.setPasaporte(pass1);
+        titular1.setPasaporte(pass1); // Asociación bidireccional
         
-        pass1.setTitular(titular1);
+        pass1.setTitular(titular1); // Asociación bidireccional. Asegurando que no se hace bucle infinito
         
         System.out.println(pass1);
 

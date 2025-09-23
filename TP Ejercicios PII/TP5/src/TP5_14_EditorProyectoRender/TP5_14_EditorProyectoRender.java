@@ -17,7 +17,7 @@ public class TP5_14_EditorProyectoRender {
 
     public static void main(String[] args) {
         
-        Proyecto proy1 = new Proyecto("Edicion_v.1.3.", "45 min.");
+        Proyecto proy1 = new Proyecto("Edicion_v.1.3.", 45);
         EditorVideo editor1 = new EditorVideo();
         editor1.exportar(".mp4", proy1);
 

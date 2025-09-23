@@ -14,7 +14,7 @@ class CodigoQR {
         this.valor = valor;
     }
     
-    public void setUsuario(Usuario usuario) { 
+    public void setUsuario(Usuario usuario) { // ​Asociación unidireccional
         this.usuario = usuario;
         System.out.println("\n------------\nEl usuario " + usuario + " inició sesión correctamente para poder generar el QR.");
     }

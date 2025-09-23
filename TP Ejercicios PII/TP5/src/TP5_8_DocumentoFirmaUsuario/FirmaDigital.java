@@ -15,11 +15,11 @@ public class FirmaDigital {
     private Documento documento;
     private static final LocalDate FECHA_ACTUAL = LocalDate.now(); // aaaa-MM-dd
     
-    public FirmaDigital(String codigoHash, String nombre, String email, Documento documento) {
+    public FirmaDigital(String codigoHash, String nombre, String email, Documento documento) { 
         this.codigoHash = codigoHash;
         this.fecha = FECHA_ACTUAL;
-        this.usuario = new Usuario(nombre, email);
-        this.documento = documento;
+        this.usuario = new Usuario(nombre, email); // Agregación
+        this.documento = documento; // Composición
     }
 
     @Override

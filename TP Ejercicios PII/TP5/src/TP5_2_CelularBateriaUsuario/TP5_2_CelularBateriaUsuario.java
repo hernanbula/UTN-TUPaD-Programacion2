@@ -19,12 +19,12 @@ public class TP5_2_CelularBateriaUsuario {
     public static void main(String[] args) {
         
         Bateria bateria1 = new Bateria("Batería de iones de litio", "5.000mAh, 45W carga rápida.");
-        Celular celular1 = new Celular("350693902637196", "Samsung", "Galaxy S25 Ultra",bateria1);
+        Celular celular1 = new Celular("350693902637196", "Samsung", "Galaxy S25 Ultra", bateria1); // Agregación
         Usuario usuario1 = new Usuario("Hernán Bula", "1234567");
         
-        usuario1.setCelular(celular1);
+        usuario1.setCelular(celular1); // Asociación bidireccional
         
-        celular1.setUsuario(usuario1);
+        celular1.setUsuario(usuario1); // Asociación bidireccional. Asegurando que no se hace bucle infinito.
         
         System.out.println(usuario1);
         System.out.println(celular1);

@@ -22,11 +22,11 @@ public class TP5_11_ReproductorCancionArtista {
         
         Artista art1 = new Artista("Divididos", "Rock");
         
-        cancion1.setArtista(art1);
+        cancion1.setArtista(art1); // ​Asociación unidireccional
                 
         Reproductor rep1 = new Reproductor();  
         
-        rep1.reproducir(cancion1);
+        rep1.reproducir(cancion1); // Dependencia de uso
 
     } 
 

@@ -7,9 +7,10 @@ package TP5_14_EditorProyectoRender;
 
 class Proyecto {
     
-    private String nombre, duracionMin;
+    private String nombre;
+    private int duracionMin;
     
-    public Proyecto(String nombre, String duracionMin) { 
+    public Proyecto(String nombre, int duracionMin) { 
         this.nombre = nombre;
         this.duracionMin = duracionMin;
     }
@@ -18,7 +19,7 @@ class Proyecto {
         return nombre;
     }
     
-    public String getDuracion() { 
+    public int getDuracion() { 
         return duracionMin;
     }
 

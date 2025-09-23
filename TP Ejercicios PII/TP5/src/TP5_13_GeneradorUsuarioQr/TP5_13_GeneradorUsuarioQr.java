@@ -19,8 +19,8 @@ public class TP5_13_GeneradorUsuarioQr {
     public static void main(String[] args) {
         
         Usuario user1 = new Usuario("Hernán Bula", "mail@mail.com");
-        GeneradorQR generator = new GeneradorQR();
-        generator.generar("http://google.com", user1);
+        GeneradorQR generator = new GeneradorQR(); // ​Asociación unidireccional
+        generator.generar("http://google.com", user1); // ​Dependencia de creación
         
 
     } 

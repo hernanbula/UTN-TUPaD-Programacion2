@@ -17,13 +17,13 @@ public class TP5_10_CuentaClaveTitular {
 
     public static void main(String[] args) {
         
-        CuentaBancaria cuenta1 = new CuentaBancaria("1234567890", 967000,"ABC123", "2025-09-20");
+        CuentaBancaria cuenta1 = new CuentaBancaria("1234567890", 967000,"ABC123", "2025-09-20"); // Composición
         
         Titular tit1 = new Titular("Hernán Bula", "12345678");
         
         System.out.println(cuenta1);
         
-        cuenta1.setTitular(tit1);
+        cuenta1.setTitular(tit1); // Asociación Bidireccional
         
         System.out.println(cuenta1);
     } 

@@ -10,6 +10,7 @@ public class Impuesto {
     private TipoImpuesto tipo;
     private double monto;
     private Contribuyente contribuyente;
+    
     public Impuesto(TipoImpuesto tipo, double monto) {
         this.tipo = tipo;
         this.monto = monto;
@@ -23,7 +24,7 @@ public class Impuesto {
 
     @Override
     public String toString() {
-        return "\n------------\n -Impuesto:\n -Tipo: " + tipo + "\n -Monto: " + monto + contribuyente;
+        return "\n -Impuesto:\n -Tipo: " + tipo + "\n -Monto: " + monto + contribuyente;
     }
 
 }

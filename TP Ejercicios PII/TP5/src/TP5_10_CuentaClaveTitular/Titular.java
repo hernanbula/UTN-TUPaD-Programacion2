@@ -15,7 +15,7 @@ class Titular {
         this.dni = dni;
     }
 
-    public void setCuentaBancaria(CuentaBancaria cuentaBancaria) {
+    public void setCuentaBancaria(CuentaBancaria cuentaBancaria) { //  Asociación bidireccional
         this.cuentaBancaria = cuentaBancaria;
         if (cuentaBancaria != null && cuentaBancaria.getTitular() != this) {
             cuentaBancaria.setTitular(this);
