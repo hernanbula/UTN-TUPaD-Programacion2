@@ -35,12 +35,14 @@ Ejemplo de entrada/salida:
                 ceros ++;
             }
         }
+        System.out.println("\n" + "-".repeat(72)); // Linea divisoria
         
         System.out.println("\nRESULTADOS:\n");
-        System.out.println("   # Positivos: " + positivos);
-        System.out.println("   # Negativos: " + negativos);
-        System.out.println("   # Ceros: " + ceros);
-        
+        System.out.println("   # Positivos:\t\t" + positivos);
+        System.out.println("   # Negativos:\t\t" + negativos);
+        System.out.println("   # Ceros:\t\t" + ceros);
+        System.out.println("\n" + "-".repeat(72)); // Linea divisoria
+
         
     } // Fin de main
 

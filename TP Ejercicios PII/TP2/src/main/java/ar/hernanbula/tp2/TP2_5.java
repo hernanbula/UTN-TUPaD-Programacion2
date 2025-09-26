@@ -32,7 +32,7 @@ public class TP2_5 {
             }
         } while (num != 0);
 
-        System.out.println("\n" + "-".repeat(72));
+        System.out.println("\n" + "-".repeat(72)); // Linea divisoria
         System.out.println("La suma de los números pares ingresados es: " + suma + "\n");
 
     } // Fin de main

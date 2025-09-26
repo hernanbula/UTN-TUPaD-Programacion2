@@ -22,24 +22,25 @@ public class TP2_7 {
         Scanner imput = new Scanner(System.in);
         int num;
         
+        System.out.println("\n" + "-".repeat(72)); // Linea divisoria
         num = validarValorEntre("Ingrese un número entre 0 y 10: ", 0, 10);
         System.out.println("Nota guardada correctamente.");
-        
+        System.out.println("-".repeat(72)); // Linea divisoria
 
     } // Fin de main
-    
-    static int validarValorEntre(String mensaje, int min,int max) {
+
+    static int validarValorEntre(String mensaje, int min, int max) {
         Scanner imput = new Scanner(System.in);
         int num;
         do {
-            System.out.print("Ingrese una nota (0-10): ");
-            num = imput.nextInt();
-            if  (num < min || num > max) {
-            System.out.print("ERROR. ");  
+            System.out.print(mensaje);
+            num = Integer.parseInt(imput.nextLine());
+            if (num < min || num > max) {
+                System.out.print("ERROR. ");
             }
         } while (num < min || num > max);
-        
+
         return num;
     }
-    
+
 } // Fin de Class
