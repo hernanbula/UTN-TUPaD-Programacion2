@@ -14,11 +14,21 @@ public class ArrayList_Java {
         Concesionaria cons1 = new Concesionaria("Bula's cars");
         
         cons1.mostrarAutos();
+                
         
-        Auto a1 = new Auto("ABC123", "Verde");
-        // Auto a2 = new Auto("DEF456", "Rojo");
-        // Auto a3 = new Auto("GHI789", "Azul");
+        Auto a1 = new Auto("ABC-123", "Amarillo");
+        Auto a2 = new Auto("DEF-456", "Negro");
+        Auto a3 = new Auto("GHI-789", "Blanco");
         
+        cons1.agregarAutos(a1);
+        cons1.agregarAutos(a2);
+        cons1.agregarAutos(a3);
+        
+        cons1.mostrarAutos();
+        
+        System.out.println("****************************");
+
+
         ArrayList<Auto> misAutos = new ArrayList();
         
         System.out.println(misAutos.size());
