@@ -8,10 +8,20 @@ package ArrayList;
 public class Auto {
     
     private String patente, color;
+    private double km;
 
-    public Auto(String patente, String color) {
+    public Auto(String patente, String color, double km) {
         this.patente = patente;
         this.color = color;
+        this.km = km;
+    }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
     }
 
     public String getPatente() {
@@ -32,8 +42,10 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" + "patente=" + patente + ", color=" + color + '}';
+        return "Auto{" + "patente=" + patente + ", color=" + color + ", km=" + km + '}';
     }
+
+    
     
     
 
