@@ -41,8 +41,12 @@ public class ArrayList_Java {
         System.out.println("*".repeat(30));
         
         misAutos.add(a1);
-        misAutos.add(new Auto("DEF456", "Rojo", 100000));
-        misAutos.add(new Auto("GHI789", "Azul", 23455));
+        misAutos.add(a2);
+        misAutos.add(a3);
+        misAutos.add(a4);
+        misAutos.add(a5);
+        misAutos.add(new Auto("DEF-567", "Violeta", 100000));
+        misAutos.add(new Auto("MNO-789", "Cian", 23455));
         
         System.out.println("El tamaño de la lista es: " + misAutos.size());
         System.out.println("La lista está compuesta de: " + misAutos);
@@ -55,6 +59,22 @@ public class ArrayList_Java {
         
         for (int i = 0; i < misAutos.size(); i++) {
             System.out.println("El auto en la posición " + i + " es :" + misAutos.get(i));
+        }
+        
+        System.out.println("\n" + "*".repeat(30));
+        Auto a = cons1.buscarAuto("DEF-456");
+        if (a == null) {
+            System.out.println("No se encontró ningun auto con esta patente");
+        } else {
+            System.out.println("Con esta patente se econtró el siguinete auto: " + a);
+        }
+        
+        System.out.println("\n" + "*".repeat(30));
+        a = cons1.buscarAutoConIterador("DEF-456"); 
+        if (a == null) {
+            System.out.println("No se encontró ningun auto con esta patente");
+        } else {
+            System.out.println("Con esta patente se econtró el siguinete auto: " + a);
         }
         
         System.out.println("*".repeat(30));

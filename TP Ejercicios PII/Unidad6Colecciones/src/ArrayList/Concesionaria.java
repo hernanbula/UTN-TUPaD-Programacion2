@@ -1,6 +1,7 @@
 package ArrayList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 // import java.util.Collection;
 
 /**
@@ -68,7 +69,6 @@ public class Concesionaria {
         return autoMasKm;
     }
 
-    
     // Los siguientes dos métodos generan una lista con todos los autos de la concesionaria con MAS KM recorridos:
     public double masKmRecorridos() {
         double kmMax = -1;
@@ -78,7 +78,7 @@ public class Concesionaria {
             }
         }
         return kmMax;
-    }    
+    }
 
     public ArrayList<Auto> autosMasKm() {
         ArrayList<Auto> listaDeMaximosKm = new ArrayList<>();
@@ -90,7 +90,7 @@ public class Concesionaria {
         }
         return listaDeMaximosKm;
     }
-    
+
     // Podemos evitar recorrer dos veces la misma lista de los metodos anterios de la siguiente manera:
     public ArrayList<Auto> autosConMasKm() {
         ArrayList<Auto> listaDeMaximosKm = new ArrayList<>();
@@ -106,7 +106,7 @@ public class Concesionaria {
         }
         return listaDeMaximosKm;
     }
-    
+
     // El siguiente método devuelve el auto de la concesionaria con MENOS KM recorridos:
     public Auto autoMenosKm() {
         Auto autoMenosKm = null;
@@ -118,9 +118,8 @@ public class Concesionaria {
             }
         }
         return autoMenosKm;
-    }    
-    
-    
+    }
+
     // Los siguientes dos métodos generan una lista con todos los autos de la concesionaria con MENOS KM recorridos:
     public double menosKmRecorridos() {
         double kmMin = Integer.MAX_VALUE;
@@ -142,9 +141,8 @@ public class Concesionaria {
         }
         return listaDeMenosKm;
     }
-    
+
     // Podemos evitar recorrer dos veces la misma lista de los metodos anterios de la siguiente manera:
-    
     public ArrayList<Auto> autosConMenosKm() {
         ArrayList<Auto> listaDeMinimosKm = new ArrayList<>();
         double kmMin = Integer.MAX_VALUE;
@@ -160,4 +158,31 @@ public class Concesionaria {
         return listaDeMinimosKm;
     }
 
+    // Esta es una mejor manera de buscar un dato en una colección que con un for each o un for. Pero existe otra mejor con iterador.
+  
+    public Auto buscarAuto(String patente) {
+        Auto autoEncontrado = null;
+        int i = 0;
+        while (i < cantidadAutos() && !autos.get(i).getPatente().equalsIgnoreCase(patente)) {
+            i++;
+        }
+        if (i < cantidadAutos()) { 
+            autoEncontrado = this.autos.get(i);
+        }
+                return autoEncontrado;
+        
+    }
+
+    // De la siguiente manera con un "Iterator" es la mejor forma de hacerlo para que funcione independientemente del tipo de colección usada.
+    public Auto buscarAutoConIterador(String patente) {
+        Auto autoEncontrado = null;
+        Iterator<Auto> iter = this.autos.iterator(); // INVESTIGAR MAS USO DE ITERADOR
+        while (iter.hasNext() && autoEncontrado == null) {
+            Auto auto = iter.next();
+            if (auto.getPatente().equalsIgnoreCase(patente)) {
+                autoEncontrado = auto;
+            }
+        }
+        return autoEncontrado;
+    }
 }
