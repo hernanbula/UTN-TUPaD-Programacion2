@@ -36,27 +36,47 @@ public class Biblioteca {
         }
     }
     
-//    public Libro buscarLibroPorIsbn(String isbn) {
-//        return;
-//    }
-    
+    public Libro buscarLibroPorIsbn(String isbn) {
+        Libro libroEncontrado = null;
+        int i = 0;
+        while (i < obtenerCantidadLibros() && !libros.get(i).getIsbn().equalsIgnoreCase(isbn) ) {
+            i++;
+        }
+        if (i < obtenerCantidadLibros()) {
+            libroEncontrado = this.libros.get(i);
+        }
+        return libroEncontrado;
+    }
+
     public void eliminarLibro(String isbn) {
-        
+        Libro lib = buscarLibroPorIsbn(isbn);
+        if (lib == null) { 
+            System.out.println("\nNo se encontró un libro con ese ISBN.\n");
+        } else {
+            System.out.println("\nSe removió correctamente el siguiente libro\n: " + lib);
+            libros.remove(lib);
+        }
     }
     
     public int obtenerCantidadLibros() {
-        return 0;
+        return libros.size();
     }
     
     public ArrayList<Libro> filtrarLibrosPorAnio(int anio) {
         ArrayList<Libro> listaLibrosAnio = new ArrayList<>();
-        // FALTA COMPLETAR
+        for (Libro libro : libros) { 
+            if (libro.getAnioPublicacion() == anio) {
+                listaLibrosAnio.add(libro);
+            }
+        }
         return listaLibrosAnio;
     }
     
-    public void mostrarAutoresDisponibles() { 
-        System.out.println("Autores disponibles: ");
-        
+    public void mostrarAutoresDisponibles() {
+        System.out.println("\n****** AUTORES ******\n");
+        for (Libro libro : libros) {
+            System.out.println("+ " + libro.getAutor().getNombre());
+        }
     }
 
 }

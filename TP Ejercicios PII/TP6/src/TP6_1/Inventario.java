@@ -1,6 +1,7 @@
 package TP6_1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Hernán E. Bula
@@ -9,12 +10,12 @@ import java.util.ArrayList;
 public class Inventario {
     
     // Atributos:
-    private ArrayList<Producto> productos;
+    private List<Producto> productos;
     
     // Constructor
 
     public Inventario() {
-        productos = new ArrayList<Producto>();
+        productos = new ArrayList<>();
     }
     
     // Métodos:
@@ -68,7 +69,7 @@ public class Inventario {
     public ArrayList<Producto> filtrarPorCategoria(CategoriaProducto categoria) {
         ArrayList<Producto> listaPorCateg = new ArrayList<>();
         for (Producto prod : productos) {
-            if (categoria != null && categoria.equals(prod.getCategoria())) {
+            if (categoria != null && categoria == prod.getCategoria()) {
                 listaPorCateg.add(prod);
             }
         }

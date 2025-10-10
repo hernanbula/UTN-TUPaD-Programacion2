@@ -71,45 +71,81 @@ public class TP6_2_BibliotecaLibros {
     public static void main(String[] args) {
         
 //    1. Creamos una biblioteca.
+    lineaMas(40);
+    System.out.println("Creamos una biblioteca");
     Biblioteca biblio = new Biblioteca("Franklin Rawson");
 
 //    2. Crear al menos tres autores
+    lineaMas(40);
     Autor autor1 = new Autor("0001", "Jorge Luis Borges", "Argentina");
     Autor autor2 = new Autor("0002", "Julio Cortázar", "Argentina");
     Autor autor3 = new Autor("0003", "Ernesto Sábato", "Argentina");
     Autor autor4 = new Autor("0004", "Albert Camus", "Francesa");
     Autor autor5 = new Autor("0005", "Sigmund Freud", "Checa");
+    System.out.println("Autores creados.");
 
 //    3. Agregar 5 libros asociados a alguno de los Autores a la biblioteca
+    lineaMas(40);
     biblio.agregarLibro("978-84-206-1933-7", "Ficciones", 1944, autor1);
     biblio.agregarLibro("978-84-350-4018-2", "Rayuela", 1963, autor2);
     biblio.agregarLibro("978-84-376-0494-7", "El túnel", 1948, autor3);
     biblio.agregarLibro("978-84-9759-275-7", "El extranjero", 1942, autor4);
     biblio.agregarLibro("978-84-206-1800-2", "La interpretación de los sueños", 1899, autor5);
-    biblio.agregarLibro("978-84-206-1934-4", "El Aleph", 1949, autor1);
+    biblio.agregarLibro("978-84-206-1934-4", "El Aleph", 1948, autor1);
     biblio.agregarLibro("978-84-376-0495-4", "Bestiario", 1951, autor2);
     biblio.agregarLibro("978-84-376-0496-1", "Sobre héroes y tumbas", 1961, autor3);
     biblio.agregarLibro("978-84-9759-276-4", "La peste", 1947, autor4);
     biblio.agregarLibro("978-84-206-1801-9", "El malestar en la cultura", 1930, autor5);
+    System.out.println("Libros creados y asociados a la biblioteca.");
+
 
 //    4. Listar todos los libros con su información y la del autor.
+    lineaMas(40);
+    System.out.println("Listar todos los libros con su información y la del autor:\n");
     biblio.listarLibros();
 
 //    5. Buscar un libro por su ISBN y mostrar su información
-
+    lineaMas(40);
+    System.out.println("Buscar un libro por su ISBN y mostrar su información:");
+    System.out.println(biblio.buscarLibroPorIsbn("978-84-376-0496-1"));
+    
 
 //    6. Filtrar y mostrar los libros publicados en un año específico
+    lineaMas(40);
+    System.out.println("Filtrar y mostrar los libros publicados en un año específico:");
+    System.out.println(biblio.filtrarLibrosPorAnio(1948));
 
 
 //    7. Eliminar un libro por su ISBN y listar los libros restantes.
-
+    lineaMas(40);
+    System.out.println("Eliminar un libro por su ISBN y listar los libros restantes:");
+    biblio.eliminarLibro("978-84-376-0496-1");
+    biblio.listarLibros();
 
 //    8. Mostrar la cantidad total de libros en la biblioteca.
-
+    lineaMas(40);
+    System.out.println("Mostrar la cantidad total de libros en la biblioteca:");
+    System.out.println("La biblioteca tiene " + biblio.obtenerCantidadLibros() + " libros.");
 
 //    9. Listar todos los autores de los libros disponibles en la biblioteca.
-        
-
+    lineaMas(40);
+    System.out.println("Listar todos los autores de los libros disponibles en la biblioteca:");
+    biblio.mostrarAutoresDisponibles();
+    
+    linea_(40);
     } 
+    
+    public static void lineaGuion(int n) {
+        System.out.println("-".repeat(n));
+    }
+
+    public static void lineaMas(int n) {
+        System.out.println("\n"+ "+".repeat(n));
+    }
+
+    public static void linea_(int n) {
+        System.out.println("_".repeat(n));
+        System.out.println("_".repeat(n));
+    }
 
 }

@@ -50,7 +50,7 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor id " + id + "\n - Nombre: " + nombre + "\n - Nacionalidad:" + nacionalidad;
+        return "Autor id " + id + "\n - Nombre: " + nombre + "\n - Nacionalidad: " + nacionalidad + "\n";
     }
     
 }
