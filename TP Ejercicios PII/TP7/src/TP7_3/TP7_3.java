@@ -1,24 +1,24 @@
-
 package TP7_3;
 
 import java.util.ArrayList;
 
 /**
  * @author Hernán E. Bula
- * 
- * 3. Empleados y polimorfismo
-    ● Clase abstracta: Empleado con método calcularSueldo()
-    ● Subclases: EmpleadoPlanta, EmpleadoTemporal
-    ● Tarea: Crear lista de empleados, invocar calcularSueldo() polimórficamente, usar instanceof para clasificar 
-* 
+ *
+ * 3. Empleados y polimorfismo ● Clase abstracta: Empleado con método
+ * calcularSueldo() ● Subclases: EmpleadoPlanta, EmpleadoTemporal ● Tarea: Crear
+ * lista de empleados, invocar calcularSueldo() polimórficamente, usar
+ * instanceof para clasificar
+ *
  */
-
 public class TP7_3 {
 
     public static void main(String[] args) {
-        
+
+        // Inicializamos array con la lista de Empleados
         ArrayList<Empleado> listaEmpleados = new ArrayList<>();
         
+        // Creamos cada empleado y lo agregamos a la lista de Empleados
         listaEmpleados.add(new EmpleadoPlanta("Hernán Bula", "UNC", "Docente", 10));
         listaEmpleados.add(new EmpleadoPlanta("Enrique Pappa", "UTN", "NoDocente", 0));
         listaEmpleados.add(new EmpleadoPlanta("Sebastian Raggeso", "CePIA", "Administrativo", 20));
@@ -26,28 +26,31 @@ public class TP7_3 {
         listaEmpleados.add(new EmpleadoTemporal("Juan Perez", "LimpioQuim", "Servicios generales", 10));
         listaEmpleados.add(new EmpleadoTemporal("Juliana Paez", "Cantina Sube FAUD", "Bartender", 0));
         
+        // Mostramos la info de empleados totales
         System.out.println("\n" + "+".repeat(30));
         System.out.println("LISTA TOTAL EMPLEADOS");
         for (Empleado empleado : listaEmpleados) {
             empleado.mostrarInfo();
         }
-        
+
+        // Mostramos la info de empleados de planta usando instanceof
         System.out.println("\n" + "+".repeat(30));
         System.out.println("EMPLEADOS DE PLANTA");
         for (Empleado empleado : listaEmpleados) {
             if (empleado instanceof EmpleadoPlanta) {
-                empleado.mostrarInfo();                
+                empleado.mostrarInfo();
             }
         }
 
+        // Mostramos la info de empleados temporales usando instanceof
         System.out.println("\n" + "+".repeat(30));
         System.out.println("EMPLEADOS TEMPORALES");
         for (Empleado empleado : listaEmpleados) {
             if (empleado instanceof EmpleadoTemporal) {
-                empleado.mostrarInfo();                
+                empleado.mostrarInfo();
             }
-        }        
+        }
 
-    } 
+    }
 
 }

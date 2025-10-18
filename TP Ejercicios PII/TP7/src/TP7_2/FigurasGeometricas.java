@@ -13,7 +13,7 @@ public abstract class FigurasGeometricas {
         this.nombre = nombre;
     }
     
-    public abstract double calcularArea();
+    public abstract double calcularArea(); // Método abstracto que obliga a sobreescribir el método en cada subclase 
 
     public String getNombre() {
         return nombre;

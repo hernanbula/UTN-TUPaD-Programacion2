@@ -16,8 +16,10 @@ public class TP7_2 {
 
     public static void main(String[] args) {
 
+        // Creamos una lista de figuras con un ArrayList
         ArrayList<FigurasGeometricas> figuras = new ArrayList<>();
         
+        // Creamos y añadimos figuras a la lista instanciando antes y en el momento
         FigurasGeometricas rect1 = new Rectangulo("Rectangulo", 4.9, 5.7);
         figuras.add(rect1);
         
@@ -28,6 +30,7 @@ public class TP7_2 {
         
         figuras.add(new Circulo("Circulo", 43.7));
         
+        // Recorremos el ArrayList t llamamos al método calcularArea() para imprimir los datos
         for (FigurasGeometricas figura : figuras) {
             System.out.println("El área de " + figura.getNombre() +  " es " + figura.calcularArea());
         }
