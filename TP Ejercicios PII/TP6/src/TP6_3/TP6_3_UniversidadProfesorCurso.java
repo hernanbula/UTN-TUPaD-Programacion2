@@ -202,6 +202,7 @@ public class TP6_3_UniversidadProfesorCurso {
         for (Profesor profesor : unc.getProfesores()) {
             profesor.mostrarInfo();
         }
+       
     }
 
     public static void lineaGuion(int n) {
