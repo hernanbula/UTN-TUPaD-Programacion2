@@ -15,7 +15,7 @@ public class Main5_TryWithResources {
 
     public static void main(String[] args) {
 
-        VisorTxt txt = new VisorTxt();
+        VisorTxt txt = new VisorTxt(); // Usa la clase VisorTxt
         txt.mostrarTxt("src/TP8_2_Excepciones/TxtEjemplo.txt");
     }
 }

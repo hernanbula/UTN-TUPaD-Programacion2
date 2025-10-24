@@ -15,7 +15,7 @@ public class Main3LecturaArchivo {
 
     public static void main(String[] args) {
 
-        VisorArchivo txt = new VisorArchivo();
+        VisorArchivo txt = new VisorArchivo(); // Usa la clase VisorArchivo
         try {
             txt.mostrarArchivo("src/TP8_2_Excepciones/TxtEjemplo.txt"); // 
         } catch (FileNotFoundException ex) {
