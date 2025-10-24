@@ -1,0 +1,45 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>70</y><w>140</w><h>120</h></coordinates><panel_attributes>CentroEducativo
+--
+--
++ catAprobados(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>70</y><w>150</w><h>130</h></coordinates><panel_attributes>Alumno
+--
+- DNI: String
+- apellido: String
+- nombre: String
+--
++ aprobo(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>350</y><w>210</w><h>80</h></coordinates><panel_attributes>/Examen/
+--
+- fecha: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>150</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-alumnos
+m1=*
+</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>190</y><w>90</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+-examenes
+m1=*
+</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>510</y><w>170</w><h>100</h></coordinates><panel_attributes>ExamenEscrito
+--
+- MIN_NOTA: int = 0;
+- MAX_NOTA: int = 10;
+- NOTA_APROB: int = 6;
+ - MAX_DURACION: int = 90;
+- duracion: int
+- nota: int
+--
++ aprobo(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>510</y><w>120</w><h>100</h></coordinates><panel_attributes>ExamenOral
+--
+--
++ aprobo(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>420</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>420</y><w>100</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>680</y><w>120</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+NivelSatisfaccion
+--
+_+ INSUFICIENTE,_
+_+ SUFICIENTE,_
+_+ EXCELENTE;_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>600</y><w>130</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-nivelSatisfaccion
+m1=1
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>350</y><w>130</w><h>80</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Aprobable/
+--
+--
+/+ aprobo(): boolean/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>190</y><w>200</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;160;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>380</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;80;10</additional_attributes></element></diagram>
