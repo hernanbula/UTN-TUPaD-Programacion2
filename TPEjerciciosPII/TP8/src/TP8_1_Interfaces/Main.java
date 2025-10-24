@@ -17,6 +17,8 @@ package TP8_1_Interfaces;
 public class Main {
 
     public static void main(String[] args) {
+    
+    // ESTE EJERCICIO NO LO PUDE TERMINAR. NO ENTENDÍ BIEN LA CONSIGNA. LLEGUÉ A CRERAR LAS CLASES, LAS INTERFACES, LAS HERENCIAS Y LAS IMPLEMENTACIONES, PERO SE ME HIZO LIO.
 
         
     } 
